@@ -329,9 +329,11 @@ parsecmd(char *s)
 {
   char *es;
   struct cmd *cmd;
-
+  // printf("%x\n",s);
   es = s + strlen(s);
+  // printf("%x\n",es);
   cmd = parseline(&s, es);
+  // printf("%x\n",s);
   peek(&s, es, "");
   if(s != es){
     fprintf(2, "leftovers: %s\n", s);
